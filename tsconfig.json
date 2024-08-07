@@ -1,0 +1,19 @@
+{
+    "compilerOptions": {
+        "rootDir": ".",
+        "module": "commonjs",
+        "target": "es2022",
+        "moduleResolution": "node",
+        "baseUrl": "./",
+        "paths": {
+            "@*": [
+                "src/*"
+            ],
+            "@core/*": [
+                "src/core/*"
+            ]
+        },
+        "esModuleInterop": true,
+        "resolveJsonModule": true
+    }
+}

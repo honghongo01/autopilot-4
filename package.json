@@ -1,0 +1,20 @@
+{
+  "name": "autopilot-4",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {},
+  "test": "npx playwright test ",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@playwright/test": "^1.46.0",
+    "@types/node": "^22.1.0"
+  },
+  "dependencies": {
+    "husky": "^9.1.4",
+    "typescript": "^5.5.4",
+    "yarn": "^1.22.22"
+  }
+}

@@ -2,6 +2,10 @@
     "cases": {
         "TC_01": {
             "data": 1,
+            "test": 1
+        },
+        "TC_02": {
+            "data": 2,
             "test": 2
         }
     }

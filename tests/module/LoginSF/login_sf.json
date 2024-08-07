@@ -1,0 +1,14 @@
+{
+    "domain": "https://unica.vn/login",
+    "path": "login",
+    "info_login": {
+        "email": "honghanh12011995@gmail.com",
+        "password": "123456",
+        "name": "hong hanh"
+    },
+    "cases": {
+        "LG_01": {
+            "picture": "test_1.png"
+        }
+    }
+}

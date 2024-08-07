@@ -11,7 +11,10 @@
             ],
             "@core/*": [
                 "src/core/*"
-            ]
+            ],
+            "@pages/*": [
+                "src/pages/*"
+            ],
         },
         "esModuleInterop": true,
         "resolveJsonModule": true

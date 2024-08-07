@@ -1,14 +1,14 @@
 {
-    "domain": "https://unica.vn/login",
-    "path": "login",
+    "domain": "https://v2.vietinvoice.vn/",
     "info_login": {
-        "email": "honghanh12011995@gmail.com",
-        "password": "123456",
-        "name": "hong hanh"
+        "email": "0312303803-999",
+        "password": "123456"
     },
     "cases": {
         "LG_01": {
-            "picture": "test_1.png"
+            "picture_beforLogin": "test_1.png",
+            "picture_formLogin": "test_2.png",
+            "picture_afterLogin": "test_3.png"
         }
     }
 }

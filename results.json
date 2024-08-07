@@ -1,0 +1,170 @@
+{
+  "config": {
+    "configFile": "D:\\autopilot-4\\playwright.config.ts",
+    "rootDir": "D:/autopilot-4/tests",
+    "forbidOnly": false,
+    "fullyParallel": true,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "reporter": [
+      [
+        "json",
+        {
+          "outputFile": "results.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 15000
+    },
+    "quiet": false,
+    "projects": [
+      {
+        "outputDir": "D:/autopilot-4/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {},
+        "id": "chromium",
+        "name": "chromium",
+        "testDir": "D:/autopilot-4/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 300000
+      }
+    ],
+    "shard": null,
+    "updateSnapshots": "missing",
+    "version": "1.46.0",
+    "workers": 4,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "module\\LoginSF\\login_sf.spec.ts",
+      "file": "module/LoginSF/login_sf.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Login storefront",
+          "file": "module/LoginSF/login_sf.spec.ts",
+          "line": 6,
+          "column": 6,
+          "specs": [
+            {
+              "title": "has title @LG_01",
+              "ok": false,
+              "tags": [
+                "LG_01"
+              ],
+              "tests": [
+                {
+                  "timeout": 300000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "status": "failed",
+                      "duration": 19333,
+                      "error": {
+                        "message": "Error: \u001b[31mScreenshot comparison failed:\u001b[39m\n\n  339245 pixels (ratio 0.37 of all image pixels) are different.\n\nExpected: \u001b[33mD:\\autopilot-4\\tests\\module\\LoginSF\\login_sf.spec.ts-snapshots\\test-1-chromium-win32.png\u001b[39m\nReceived: \u001b[33mD:\\autopilot-4\\test-results\\module-LoginSF-login_sf-Login-storefront-has-title-LG-01-chromium\\test-1-actual.png\u001b[39m\n    Diff: \u001b[33mD:\\autopilot-4\\test-results\\module-LoginSF-login_sf-Login-storefront-has-title-LG-01-chromium\\test-1-diff.png\u001b[39m\n",
+                        "stack": "Error: \u001b[31mScreenshot comparison failed:\u001b[39m\n\n  339245 pixels (ratio 0.37 of all image pixels) are different.\n\nExpected: \u001b[33mD:\\autopilot-4\\tests\\module\\LoginSF\\login_sf.spec.ts-snapshots\\test-1-chromium-win32.png\u001b[39m\nReceived: \u001b[33mD:\\autopilot-4\\test-results\\module-LoginSF-login_sf-Login-storefront-has-title-LG-01-chromium\\test-1-actual.png\u001b[39m\n    Diff: \u001b[33mD:\\autopilot-4\\test-results\\module-LoginSF-login_sf-Login-storefront-has-title-LG-01-chromium\\test-1-diff.png\u001b[39m\n\n    at D:\\autopilot-4\\tests\\module\\LoginSF\\login_sf.spec.ts:11:45\n    at D:\\autopilot-4\\tests\\module\\LoginSF\\login_sf.spec.ts:9:9",
+                        "location": {
+                          "file": "D:\\autopilot-4\\tests\\module\\LoginSF\\login_sf.spec.ts",
+                          "column": 45,
+                          "line": 11
+                        },
+                        "snippet": "\u001b[0m \u001b[90m  9 |\u001b[39m         \u001b[36mawait\u001b[39m test\u001b[33m.\u001b[39mstep(\u001b[32m\"Login storefront\"\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m () \u001b[33m=>\u001b[39m {\n \u001b[90m 10 |\u001b[39m             \u001b[36mawait\u001b[39m loginPage\u001b[33m.\u001b[39mgoto(conf\u001b[33m.\u001b[39msuiteConf\u001b[33m.\u001b[39mdomain)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 11 |\u001b[39m             expect(\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mscreenshot())\u001b[33m.\u001b[39mtoMatchSnapshot(conf\u001b[33m.\u001b[39mcaseConf\u001b[33m.\u001b[39mpicture_beforLogin)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                             \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 12 |\u001b[39m             \u001b[36mawait\u001b[39m loginPage\u001b[33m.\u001b[39minputForm(conf\u001b[33m.\u001b[39msuiteConf\u001b[33m.\u001b[39minfo_login)\u001b[33m;\u001b[39m\n \u001b[90m 13 |\u001b[39m             expect(\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mscreenshot())\u001b[33m.\u001b[39mtoMatchSnapshot(conf\u001b[33m.\u001b[39mcaseConf\u001b[33m.\u001b[39mpicture_formLogin)\u001b[33m;\u001b[39m\n \u001b[90m 14 |\u001b[39m             \u001b[36mawait\u001b[39m loginPage\u001b[33m.\u001b[39mclickButtonByName(\u001b[32m\"Đăng nhập\"\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "D:\\autopilot-4\\tests\\module\\LoginSF\\login_sf.spec.ts",
+                            "column": 45,
+                            "line": 11
+                          },
+                          "message": "Error: \u001b[31mScreenshot comparison failed:\u001b[39m\n\n  339245 pixels (ratio 0.37 of all image pixels) are different.\n\nExpected: \u001b[33mD:\\autopilot-4\\tests\\module\\LoginSF\\login_sf.spec.ts-snapshots\\test-1-chromium-win32.png\u001b[39m\nReceived: \u001b[33mD:\\autopilot-4\\test-results\\module-LoginSF-login_sf-Login-storefront-has-title-LG-01-chromium\\test-1-actual.png\u001b[39m\n    Diff: \u001b[33mD:\\autopilot-4\\test-results\\module-LoginSF-login_sf-Login-storefront-has-title-LG-01-chromium\\test-1-diff.png\u001b[39m\n\n\n\u001b[0m \u001b[90m  9 |\u001b[39m         \u001b[36mawait\u001b[39m test\u001b[33m.\u001b[39mstep(\u001b[32m\"Login storefront\"\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m () \u001b[33m=>\u001b[39m {\n \u001b[90m 10 |\u001b[39m             \u001b[36mawait\u001b[39m loginPage\u001b[33m.\u001b[39mgoto(conf\u001b[33m.\u001b[39msuiteConf\u001b[33m.\u001b[39mdomain)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 11 |\u001b[39m             expect(\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mscreenshot())\u001b[33m.\u001b[39mtoMatchSnapshot(conf\u001b[33m.\u001b[39mcaseConf\u001b[33m.\u001b[39mpicture_beforLogin)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                             \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 12 |\u001b[39m             \u001b[36mawait\u001b[39m loginPage\u001b[33m.\u001b[39minputForm(conf\u001b[33m.\u001b[39msuiteConf\u001b[33m.\u001b[39minfo_login)\u001b[33m;\u001b[39m\n \u001b[90m 13 |\u001b[39m             expect(\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mscreenshot())\u001b[33m.\u001b[39mtoMatchSnapshot(conf\u001b[33m.\u001b[39mcaseConf\u001b[33m.\u001b[39mpicture_formLogin)\u001b[33m;\u001b[39m\n \u001b[90m 14 |\u001b[39m             \u001b[36mawait\u001b[39m loginPage\u001b[33m.\u001b[39mclickButtonByName(\u001b[32m\"Đăng nhập\"\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m\n\n\u001b[2m    at D:\\autopilot-4\\tests\\module\\LoginSF\\login_sf.spec.ts:11:45\u001b[22m\n\u001b[2m    at D:\\autopilot-4\\tests\\module\\LoginSF\\login_sf.spec.ts:9:9\u001b[22m"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "steps": [
+                        {
+                          "title": "Login storefront",
+                          "duration": 18878,
+                          "error": {
+                            "message": "Error: \u001b[31mScreenshot comparison failed:\u001b[39m\n\n  339245 pixels (ratio 0.37 of all image pixels) are different.\n\nExpected: \u001b[33mD:\\autopilot-4\\tests\\module\\LoginSF\\login_sf.spec.ts-snapshots\\test-1-chromium-win32.png\u001b[39m\nReceived: \u001b[33mD:\\autopilot-4\\test-results\\module-LoginSF-login_sf-Login-storefront-has-title-LG-01-chromium\\test-1-actual.png\u001b[39m\n    Diff: \u001b[33mD:\\autopilot-4\\test-results\\module-LoginSF-login_sf-Login-storefront-has-title-LG-01-chromium\\test-1-diff.png\u001b[39m\n",
+                            "stack": "Error: \u001b[31mScreenshot comparison failed:\u001b[39m\n\n  339245 pixels (ratio 0.37 of all image pixels) are different.\n\nExpected: \u001b[33mD:\\autopilot-4\\tests\\module\\LoginSF\\login_sf.spec.ts-snapshots\\test-1-chromium-win32.png\u001b[39m\nReceived: \u001b[33mD:\\autopilot-4\\test-results\\module-LoginSF-login_sf-Login-storefront-has-title-LG-01-chromium\\test-1-actual.png\u001b[39m\n    Diff: \u001b[33mD:\\autopilot-4\\test-results\\module-LoginSF-login_sf-Login-storefront-has-title-LG-01-chromium\\test-1-diff.png\u001b[39m\n\n    at D:\\autopilot-4\\tests\\module\\LoginSF\\login_sf.spec.ts:11:45\n    at D:\\autopilot-4\\tests\\module\\LoginSF\\login_sf.spec.ts:9:9",
+                            "location": {
+                              "file": "D:\\autopilot-4\\tests\\module\\LoginSF\\login_sf.spec.ts",
+                              "column": 45,
+                              "line": 11
+                            },
+                            "snippet": "\u001b[0m \u001b[90m  9 |\u001b[39m         \u001b[36mawait\u001b[39m test\u001b[33m.\u001b[39mstep(\u001b[32m\"Login storefront\"\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m () \u001b[33m=>\u001b[39m {\n \u001b[90m 10 |\u001b[39m             \u001b[36mawait\u001b[39m loginPage\u001b[33m.\u001b[39mgoto(conf\u001b[33m.\u001b[39msuiteConf\u001b[33m.\u001b[39mdomain)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 11 |\u001b[39m             expect(\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mscreenshot())\u001b[33m.\u001b[39mtoMatchSnapshot(conf\u001b[33m.\u001b[39mcaseConf\u001b[33m.\u001b[39mpicture_beforLogin)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                             \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 12 |\u001b[39m             \u001b[36mawait\u001b[39m loginPage\u001b[33m.\u001b[39minputForm(conf\u001b[33m.\u001b[39msuiteConf\u001b[33m.\u001b[39minfo_login)\u001b[33m;\u001b[39m\n \u001b[90m 13 |\u001b[39m             expect(\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mscreenshot())\u001b[33m.\u001b[39mtoMatchSnapshot(conf\u001b[33m.\u001b[39mcaseConf\u001b[33m.\u001b[39mpicture_formLogin)\u001b[33m;\u001b[39m\n \u001b[90m 14 |\u001b[39m             \u001b[36mawait\u001b[39m loginPage\u001b[33m.\u001b[39mclickButtonByName(\u001b[32m\"Đăng nhập\"\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m"
+                          }
+                        }
+                      ],
+                      "startTime": "2024-08-07T07:53:31.133Z",
+                      "attachments": [
+                        {
+                          "name": "test-1-expected.png",
+                          "contentType": "image/png",
+                          "path": "D:\\autopilot-4\\tests\\module\\LoginSF\\login_sf.spec.ts-snapshots\\test-1-chromium-win32.png"
+                        },
+                        {
+                          "name": "test-1-actual.png",
+                          "contentType": "image/png",
+                          "path": "D:\\autopilot-4\\test-results\\module-LoginSF-login_sf-Login-storefront-has-title-LG-01-chromium\\test-1-actual.png"
+                        },
+                        {
+                          "name": "test-1-diff.png",
+                          "contentType": "image/png",
+                          "path": "D:\\autopilot-4\\test-results\\module-LoginSF-login_sf-Login-storefront-has-title-LG-01-chromium\\test-1-diff.png"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "D:\\autopilot-4\\tests\\module\\LoginSF\\login_sf.spec.ts",
+                        "column": 45,
+                        "line": 11
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "2759ded83022aaec6d56-a13e04891ac36f9fffd4",
+              "file": "module/LoginSF/login_sf.spec.ts",
+              "line": 7,
+              "column": 9
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2024-08-07T07:53:30.380Z",
+    "duration": 21992.735,
+    "expected": 0,
+    "skipped": 0,
+    "unexpected": 1,
+    "flaky": 0
+  }
+}

@@ -1,6 +1,6 @@
 import path from "path";
 import fs from "fs";
-import type { Config } from "@core/types";
+import type { Config } from "@types";
 
 export class ConfigImpl {
     fileName: string | undefined;

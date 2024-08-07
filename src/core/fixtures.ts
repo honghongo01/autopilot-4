@@ -1,5 +1,5 @@
 import { request, test as base } from "@playwright/test";
-import type { Config } from "@core/types";
+import type { Config } from "@types";
 import { ConfigImpl } from '@core/conf/conf'
 import { extractCodeName } from "@core/untis/string";
 

@@ -12,6 +12,8 @@ export class MyReporter implements Reporter {
     private startedAt: Date;
     private config: FullConfig;
     private suite: Suite;
+    private fileName = "";
+    private dir = "";
 
     constructor(options: { customOption?: string } = {}) {
         console.log(`my-awesome-reporter setup with customOption set to ${options.customOption}`);
@@ -19,7 +21,6 @@ export class MyReporter implements Reporter {
 
     onBegin(config: FullConfig, suite: Suite) {
         this.config = config;
-        console.log(config)
         this.suite = suite;
         this.startedAt = new Date();
     }
@@ -39,26 +40,31 @@ export class MyReporter implements Reporter {
                 result: result.status == "passed" ? "pass" : "fail",
                 testResult: "",
                 realResult: result.status,
+                error: result.errors.map(e => e.message)
             };
             // overwrite with result of the last run
             this.testCases.set(codeName[0], runResult);
+            const dirPath = test.parent.parent.title;
+            const dir = path.dirname(dirPath);
+            const fileName = path.basename(dirPath, ".spec.ts");
+            this.fileName = fileName;
+            this.dir = dir;
         } else {
             console.error(`Cannot extract code name from ${test.title}`);
         }
     }
-
     onEnd(result: FullResult) {
         const projectSuites = this.suite.suites;
         for (const suite of projectSuites) {
             const project = suite.project();
-            console.log(project.outputDir);
-            const reportFolder = path.join(project.outputDir, "report");
-            fs.mkdirSync(reportFolder, { recursive: true });
+            const reportFolder = path.join(project.outputDir, "reports", this.dir);
+            if (!fs.existsSync(reportFolder)) {
+                fs.mkdirSync(reportFolder, { recursive: true });
+            }
             let reportFile: string | undefined;
             for (let i = 0; i < 10; ++i) {
                 reportFile = path.join(
-                    reportFolder,
-                    project.name + ".json",
+                    reportFolder, `${this.fileName}.json`,
                 );
                 try {
                     if (fs.existsSync(reportFile)) continue;
@@ -68,7 +74,6 @@ export class MyReporter implements Reporter {
                 break;
             }
             if (!reportFile) throw new Error("Internal error, could not create report file");
-
             const report = Array.from(this.testCases.values());
             fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
         }

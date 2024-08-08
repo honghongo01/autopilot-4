@@ -15,7 +15,13 @@ test.describe("Login storefront", () => {
             await loginPage.page.waitForLoadState("load");
             await loginPage.page.waitForSelector(loginPage.xpathEinvoice);
             expect(await page.screenshot()).toMatchSnapshot(conf.caseConf.picture_afterLogin);
-            console.log(testInfo)
+        });
+    });
+
+    test('has title @LG_02', async ({ conf, page }, testInfo) => {
+        await test.step("Login storefront", async () => {
+            expect("OK").toBe("OK");
         });
     })
+
 });

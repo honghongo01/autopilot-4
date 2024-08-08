@@ -1,3 +1,4 @@
+
 export type RunResult = {
     codeName: string;
     startAt: Date;
@@ -5,4 +6,6 @@ export type RunResult = {
     result: string;
     testResult: string;
     realResult: string;
+    error: string[];
+
 };

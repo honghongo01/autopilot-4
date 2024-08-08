@@ -1,32 +1,30 @@
 {
   "case": [
     {
-      "codeName": "T_02",
-      "startAt": "2024-08-08T02:44:11.483Z",
-      "finishedAt": "2024-08-08T02:44:11.498Z",
-      "result": "pass",
-      "testResult": "",
-      "realResult": "passed",
-      "fileTrace": "http://localhost:9323/#?testId=bcc83362684dc52e2017-b2185950b80cc9712fc2",
-      "error": []
-    },
-    {
       "codeName": "T_01",
-      "startAt": "2024-08-08T02:44:11.486Z",
-      "finishedAt": "2024-08-08T02:44:11.505Z",
+      "startAt": "2024-08-08T02:57:06.448Z",
+      "finishedAt": "2024-08-08T02:57:06.478Z",
       "result": "fail",
       "testResult": "",
       "realResult": "failed",
-      "fileTrace": "http://localhost:9323/#?testId=bcc83362684dc52e2017-79c024236eb33309dca7",
       "error": [
         "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m\"abc\"\u001b[39m\nReceived: \u001b[31m\"OK\"\u001b[39m"
       ]
+    },
+    {
+      "codeName": "T_02",
+      "startAt": "2024-08-08T02:57:06.456Z",
+      "finishedAt": "2024-08-08T02:57:06.481Z",
+      "result": "pass",
+      "testResult": "",
+      "realResult": "passed",
+      "error": []
     }
   ],
   "summery": {
     "totalPass": 1,
     "totalFalse": 1,
-    "sstartTime": "2024-08-08T02:44:10.773Z",
-    "duration": 802.1729999999999
+    "sstartTime": "2024-08-08T02:57:05.678Z",
+    "duration": 841.5909999999999
   }
 }

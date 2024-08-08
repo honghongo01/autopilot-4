@@ -32,7 +32,6 @@ export class MyReporter implements Reporter {
     }
 
     onTestEnd(test: TestCase, result: TestResult) {
-        console.log(test);
         console.log(`Test ended: ${test.title} with status: ${result.status}`);
         const codeName = extractCodeName(test.title);
         if (codeName.length > 0) {
@@ -63,13 +62,11 @@ export class MyReporter implements Reporter {
     }
     onEnd(result: FullResult) {
         const projectSuites = this.suite.suites;
-        console.log(projectSuites);
         for (const suite of projectSuites) {
             const project = suite.project();
             const basePath = path.dirname(project.outputDir);
             const reportFolder = path.join(basePath, "reports", this.dir);
             // const reportFolder = path.join(project.outputDir, "reports", this.dir);
-            console.log(project.outputDir);
             if (!fs.existsSync(reportFolder)) {
                 fs.mkdirSync(reportFolder, { recursive: true });
             }
@@ -86,7 +83,6 @@ export class MyReporter implements Reporter {
                 break;
             }
             if (!reportFile) throw new Error("Internal error, could not create report file");
-            console.log(result);
             const report = {
                 "case": Array.from(this.testCases.values()), "summery": {
                     "totalPass": this.passCount, "totalFalse": this.failCount, "sstartTime": result.startTime, "duration": result.duration

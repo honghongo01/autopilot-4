@@ -7,5 +7,6 @@ export type RunResult = {
     testResult: string;
     realResult: string;
     error: string[];
+    fileTrace?: string
 
 };

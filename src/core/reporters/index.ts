@@ -14,6 +14,8 @@ export class MyReporter implements Reporter {
     private suite: Suite;
     private fileName = "";
     private dir = "";
+    private passCount = 0;
+    private failCount = 0;
 
     constructor(options: { customOption?: string } = {}) {
         console.log(`my-awesome-reporter setup with customOption set to ${options.customOption}`);
@@ -30,6 +32,7 @@ export class MyReporter implements Reporter {
     }
 
     onTestEnd(test: TestCase, result: TestResult) {
+        console.log(test);
         console.log(`Test ended: ${test.title} with status: ${result.status}`);
         const codeName = extractCodeName(test.title);
         if (codeName.length > 0) {
@@ -40,6 +43,7 @@ export class MyReporter implements Reporter {
                 result: result.status == "passed" ? "pass" : "fail",
                 testResult: "",
                 realResult: result.status,
+                fileTrace: `http://localhost:9323/#?testId=${test.id}`,
                 error: result.errors.map(e => e.message)
             };
             // overwrite with result of the last run
@@ -49,12 +53,18 @@ export class MyReporter implements Reporter {
             const fileName = path.basename(dirPath, ".spec.ts");
             this.fileName = fileName;
             this.dir = dir;
+            if (result.status === 'passed') {
+                this.passCount += 1;
+            } else if (result.status === 'failed') {
+                this.failCount += 1;
+            }
         } else {
             console.error(`Cannot extract code name from ${test.title}`);
         }
     }
     onEnd(result: FullResult) {
         const projectSuites = this.suite.suites;
+        console.log(projectSuites);
         for (const suite of projectSuites) {
             const project = suite.project();
             const basePath = path.dirname(project.outputDir);
@@ -77,7 +87,12 @@ export class MyReporter implements Reporter {
                 break;
             }
             if (!reportFile) throw new Error("Internal error, could not create report file");
-            const report = Array.from(this.testCases.values());
+            console.log(result);
+            const report = {
+                "case": Array.from(this.testCases.values()), "summery": {
+                    "totalPass": this.passCount, "totalFalse": this.failCount, "sstartTime": result.startTime, "duration": result.duration
+                }
+            };
             fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
         }
     }

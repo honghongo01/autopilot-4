@@ -92,7 +92,7 @@ export class MyReporter implements Reporter {
             } else {
                 existingReport = Array.from(this.testCases.values());
             }
-            existingReport.map(testRult => {
+            existingReport.forEach(testRult => {
                 if (testRult.result === 'pass') {
                     this.passCount += 1;
                 } else if (testRult.result === 'fail') {

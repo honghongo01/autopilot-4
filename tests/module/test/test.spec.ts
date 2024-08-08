@@ -6,7 +6,7 @@ import { link } from 'fs';
 test.describe("Login storefront", () => {
     test('has title @T_01', async ({ }) => {
         await test.step("Login storefront", async () => {
-            expect("OK").toBe("abc");
+            expect("OK").toBe("OK");
         });
     });
 

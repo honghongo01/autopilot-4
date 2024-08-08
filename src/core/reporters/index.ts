@@ -50,12 +50,7 @@ export class MyReporter implements Reporter {
             const dir = path.dirname(dirPath);
             const fileName = path.basename(dirPath, ".spec.ts");
             this.fileName = fileName;
-            this.dir = dir;
-            if (result.status === 'passed') {
-                this.passCount += 1;
-            } else if (result.status === 'failed') {
-                this.failCount += 1;
-            }
+            this.dir = dir
         } else {
             console.error(`Cannot extract code name from ${test.title}`);
         }
@@ -82,13 +77,38 @@ export class MyReporter implements Reporter {
                 }
                 break;
             }
-            if (!reportFile) throw new Error("Internal error, could not create report file");
-            const report = {
-                "case": Array.from(this.testCases.values()), "summery": {
-                    "totalPass": this.passCount, "totalFalse": this.failCount, "sstartTime": result.startTime, "duration": result.duration
+            let existingReport = [];
+            if (fs.existsSync(reportFile)) {
+                const existingReportData = fs.readFileSync(reportFile, 'utf-8');
+                existingReport = JSON.parse(existingReportData)["testCases"];
+                for (const [title, runResult] of this.testCases.entries()) {
+                    const index = existingReport.findIndex((caseReport: any) => caseReport.codeName === title);
+                    if (index !== -1) {
+                        existingReport[index] = runResult;
+                    } else {
+                        existingReport.push(runResult);
+                    }
+                }
+            } else {
+                existingReport = Array.from(this.testCases.values());
+            }
+            existingReport.map(testRult => {
+                if (testRult.result === 'pass') {
+                    this.passCount += 1;
+                } else if (testRult.result === 'fail') {
+                    this.failCount += 1;
+                }
+            })
+            const newReport = {
+                testCases: existingReport,
+                summary: {
+                    passed: this.passCount,
+                    failed: this.failCount,
+                    total: this.passCount + this.failCount,
                 }
             };
-            fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
+
+            fs.writeFileSync(reportFile, JSON.stringify(newReport, null, 2));
         }
     }
 }

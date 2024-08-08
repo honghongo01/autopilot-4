@@ -1,9 +1,9 @@
 {
-  "case": [
+  "testCases": [
     {
       "codeName": "T_02",
-      "startAt": "2024-08-08T03:54:24.685Z",
-      "finishedAt": "2024-08-08T03:54:24.702Z",
+      "startAt": "2024-08-08T09:36:33.513Z",
+      "finishedAt": "2024-08-08T09:36:33.526Z",
       "result": "pass",
       "testResult": "",
       "realResult": "passed",
@@ -11,8 +11,8 @@
     },
     {
       "codeName": "T_01",
-      "startAt": "2024-08-08T03:54:24.682Z",
-      "finishedAt": "2024-08-08T03:54:24.703Z",
+      "startAt": "2024-08-08T09:46:01.329Z",
+      "finishedAt": "2024-08-08T09:46:01.347Z",
       "result": "fail",
       "testResult": "",
       "realResult": "failed",
@@ -21,10 +21,9 @@
       ]
     }
   ],
-  "summery": {
-    "totalPass": 1,
-    "totalFalse": 1,
-    "sstartTime": "2024-08-08T03:54:23.967Z",
-    "duration": 764.593
+  "summary": {
+    "passed": 1,
+    "failed": 1,
+    "total": 2
   }
 }

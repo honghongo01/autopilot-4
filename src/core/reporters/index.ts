@@ -43,7 +43,6 @@ export class MyReporter implements Reporter {
                 result: result.status == "passed" ? "pass" : "fail",
                 testResult: "",
                 realResult: result.status,
-                fileTrace: `http://localhost:9323/#?testId=${test.id}`,
                 error: result.errors.map(e => e.message)
             };
             // overwrite with result of the last run

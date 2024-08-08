@@ -1,6 +1,6 @@
 node_modules/
 /test-results/
-/report/
+/reports/
 /playwright-report/
 /blob-report/
 /playwright/.cache/

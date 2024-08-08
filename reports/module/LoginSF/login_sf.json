@@ -2,31 +2,29 @@
   "case": [
     {
       "codeName": "LG_02",
-      "startAt": "2024-08-08T02:47:01.618Z",
-      "finishedAt": "2024-08-08T02:47:02.125Z",
+      "startAt": "2024-08-08T03:53:44.792Z",
+      "finishedAt": "2024-08-08T03:53:45.385Z",
       "result": "pass",
       "testResult": "",
       "realResult": "passed",
-      "fileTrace": "http://localhost:9323/#?testId=2759ded83022aaec6d56-7d4a38e4dd5df83b0550",
       "error": []
     },
     {
       "codeName": "LG_01",
-      "startAt": "2024-08-08T02:47:01.629Z",
-      "finishedAt": "2024-08-08T02:47:08.369Z",
+      "startAt": "2024-08-08T03:53:44.784Z",
+      "finishedAt": "2024-08-08T03:53:52.733Z",
       "result": "fail",
       "testResult": "",
       "realResult": "failed",
-      "fileTrace": "http://localhost:9323/#?testId=2759ded83022aaec6d56-a13e04891ac36f9fffd4",
       "error": [
-        "Error: \u001b[31mScreenshot comparison failed:\u001b[39m\n\n  5516 pixels (ratio 0.01 of all image pixels) are different.\n\nExpected: \u001b[33mD:\\autopilot-4\\tests\\module\\LoginSF\\login_sf.spec.ts-snapshots\\test-1-chromium-win32.png\u001b[39m\nReceived: \u001b[33mD:\\autopilot-4\\test-results\\module-LoginSF-login_sf-Login-storefront-has-title-LG-01-chromium\\test-1-actual.png\u001b[39m\n    Diff: \u001b[33mD:\\autopilot-4\\test-results\\module-LoginSF-login_sf-Login-storefront-has-title-LG-01-chromium\\test-1-diff.png\u001b[39m\n"
+        "Error: \u001b[31mScreenshot comparison failed:\u001b[39m\n\n  652079 pixels (ratio 0.71 of all image pixels) are different.\n\nExpected: \u001b[33mD:\\autopilot-4\\tests\\module\\LoginSF\\login_sf.spec.ts-snapshots\\test-1-chromium-win32.png\u001b[39m\nReceived: \u001b[33mD:\\autopilot-4\\test-results\\module-LoginSF-login_sf-Login-storefront-has-title-LG-01-chromium\\test-1-actual.png\u001b[39m\n    Diff: \u001b[33mD:\\autopilot-4\\test-results\\module-LoginSF-login_sf-Login-storefront-has-title-LG-01-chromium\\test-1-diff.png\u001b[39m\n"
       ]
     }
   ],
   "summery": {
     "totalPass": 1,
     "totalFalse": 1,
-    "sstartTime": "2024-08-08T02:47:00.902Z",
-    "duration": 8053.544
+    "sstartTime": "2024-08-08T03:53:44.055Z",
+    "duration": 9236.167000000001
   }
 }

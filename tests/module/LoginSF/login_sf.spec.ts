@@ -5,6 +5,7 @@ import { link } from 'fs';
 
 test.describe("Login storefront", () => {
     test('has title @LG_01', async ({ conf, page }, testInfo) => {
+        testInfo.snapshotSuffix = "";
         const loginPage = new LoginPage(page, conf.suiteConf.domain)
         await test.step("Login storefront", async () => {
             await loginPage.goto(conf.suiteConf.domain);

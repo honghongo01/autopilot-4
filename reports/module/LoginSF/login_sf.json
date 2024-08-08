@@ -1,0 +1,22 @@
+[
+  {
+    "codeName": "LG_02",
+    "startAt": "2024-08-08T02:26:56.592Z",
+    "finishedAt": "2024-08-08T02:26:57.412Z",
+    "result": "pass",
+    "testResult": "",
+    "realResult": "passed",
+    "error": []
+  },
+  {
+    "codeName": "LG_01",
+    "startAt": "2024-08-08T02:26:56.585Z",
+    "finishedAt": "2024-08-08T02:27:20.885Z",
+    "result": "fail",
+    "testResult": "",
+    "realResult": "failed",
+    "error": [
+      "Error: \u001b[31mScreenshot comparison failed:\u001b[39m\n\n  652079 pixels (ratio 0.71 of all image pixels) are different.\n\nExpected: \u001b[33mD:\\autopilot-4\\tests\\module\\LoginSF\\login_sf.spec.ts-snapshots\\test-1-chromium-win32.png\u001b[39m\nReceived: \u001b[33mD:\\autopilot-4\\test-results\\module-LoginSF-login_sf-Login-storefront-has-title-LG-01-chromium\\test-1-actual.png\u001b[39m\n    Diff: \u001b[33mD:\\autopilot-4\\test-results\\module-LoginSF-login_sf-Login-storefront-has-title-LG-01-chromium\\test-1-diff.png\u001b[39m\n"
+    ]
+  }
+]

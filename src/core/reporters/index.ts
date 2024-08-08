@@ -57,7 +57,10 @@ export class MyReporter implements Reporter {
         const projectSuites = this.suite.suites;
         for (const suite of projectSuites) {
             const project = suite.project();
-            const reportFolder = path.join(project.outputDir, "reports", this.dir);
+            const basePath = path.dirname(project.outputDir);
+            const reportFolder = path.join(basePath, "reports", this.dir);
+            // const reportFolder = path.join(project.outputDir, "reports", this.dir);
+            console.log(project.outputDir);
             if (!fs.existsSync(reportFolder)) {
                 fs.mkdirSync(reportFolder, { recursive: true });
             }

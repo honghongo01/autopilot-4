@@ -3,6 +3,7 @@ import { SFPage } from "@pages/page";
 import { Login } from "@types"
 export class LoginPage extends SFPage {
     xpathEinvoice = "//section[@id='einvoice-container']";
+    xpathMessage = "//div[@class='Toastify__toast-body']";
     constructor(page: Page, domain: string) {
         super(page, domain);
     }

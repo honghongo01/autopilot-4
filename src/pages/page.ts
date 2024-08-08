@@ -14,4 +14,8 @@ export class SFPage {
     genLoc(selector: string) {
         return this.page.locator(selector)
     }
+
+    async getTextContent(locator: string): Promise<string> {
+        return (await this.page.locator(locator).textContent()).trim();
+    }
 }

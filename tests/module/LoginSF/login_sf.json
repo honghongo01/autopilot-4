@@ -8,7 +8,8 @@
         "LG_01": {
             "picture_beforLogin": "test_1.png",
             "picture_formLogin": "test_2.png",
-            "picture_afterLogin": "test_3.png"
+            "picture_afterLogin": "test_3.png",
+            "messgae": "Xin chào, Wintech kiểm thử hoá đơn có mã"
         }
     }
 }

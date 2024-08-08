@@ -2,8 +2,8 @@
   "case": [
     {
       "codeName": "LG_02",
-      "startAt": "2024-08-08T03:53:44.792Z",
-      "finishedAt": "2024-08-08T03:53:45.385Z",
+      "startAt": "2024-08-08T07:51:20.868Z",
+      "finishedAt": "2024-08-08T07:51:20.889Z",
       "result": "pass",
       "testResult": "",
       "realResult": "passed",
@@ -11,20 +11,18 @@
     },
     {
       "codeName": "LG_01",
-      "startAt": "2024-08-08T03:53:44.784Z",
-      "finishedAt": "2024-08-08T03:53:52.733Z",
-      "result": "fail",
+      "startAt": "2024-08-08T07:51:20.859Z",
+      "finishedAt": "2024-08-08T07:51:48.955Z",
+      "result": "pass",
       "testResult": "",
-      "realResult": "failed",
-      "error": [
-        "Error: \u001b[31mScreenshot comparison failed:\u001b[39m\n\n  652079 pixels (ratio 0.71 of all image pixels) are different.\n\nExpected: \u001b[33mD:\\autopilot-4\\tests\\module\\LoginSF\\login_sf.spec.ts-snapshots\\test-1-chromium-win32.png\u001b[39m\nReceived: \u001b[33mD:\\autopilot-4\\test-results\\module-LoginSF-login_sf-Login-storefront-has-title-LG-01-chromium\\test-1-actual.png\u001b[39m\n    Diff: \u001b[33mD:\\autopilot-4\\test-results\\module-LoginSF-login_sf-Login-storefront-has-title-LG-01-chromium\\test-1-diff.png\u001b[39m\n"
-      ]
+      "realResult": "passed",
+      "error": []
     }
   ],
   "summery": {
-    "totalPass": 1,
-    "totalFalse": 1,
-    "sstartTime": "2024-08-08T03:53:44.055Z",
-    "duration": 9236.167000000001
+    "totalPass": 2,
+    "totalFalse": 0,
+    "sstartTime": "2024-08-08T07:51:20.101Z",
+    "duration": 29411.659
   }
 }

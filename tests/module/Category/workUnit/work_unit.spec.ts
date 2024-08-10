@@ -41,7 +41,6 @@ test.describe("Login dashboard hoa don icorp", () => {
         await test.step("Kiem tra data sau khi thon thanh cong", async () => {
             await workUnitpage.page.reload({ waitUntil: "load" });
             const dataUnit = await workUnitpage.getInforUnit();
-            console.log("abc", dataUnit);
             expect(dataUnit).toEqual(
                 expect.objectContaining(conf.caseConf.infor_unit),
             );

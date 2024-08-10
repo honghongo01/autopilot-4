@@ -1,0 +1,49 @@
+{
+    "domain": "https://v2.vietinvoice.vn/",
+    "info_login": {
+        "email": "0312303803-999",
+        "password": "123456"
+    },
+    "cases": {
+        "DV_01": {
+            "picture_form_input": "form_1.png",
+            "messgae": "Thêm đơn vị test thành công",
+            "infor_unit": {
+                "unitCode": "DV03",
+                "unitName": "test"
+            }
+        },
+        "DV_02": {
+            "step_infor": [
+                {
+                    "stepName": "Verify khi bo trong field ba buoc",
+                    "picture": "form_false.png",
+                    "infor_unit": {
+                        "unitCode": " ",
+                        "unitName": " "
+                    },
+                    "index_btn": 1
+                },
+                {
+                    "stepName": "Verify khi nhap trung ma don vi",
+                    "infor_unit": {
+                        "unitCode": "DV02",
+                        "unitName": "test"
+                    },
+                    "messgae": "Mã đơn vị đã tồn tại",
+                    "index_btn": 1
+                },
+                {
+                    "stepName": "Verify khi bo trong field ba buoc",
+                    "infor_unit": {
+                        "unitCode": "DV_111",
+                        "unitName": "test",
+                        "unitParent": "F001>F1>13"
+                    },
+                    "messgae": "Đơn vị chỉ có tối đa ba cấp",
+                    "index_btn": 2
+                }
+            ]
+        }
+    }
+}

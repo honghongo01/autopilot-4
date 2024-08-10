@@ -1,5 +1,5 @@
 export type Login = {
-    email: string;
-    password: string;
-    name: string;
+    password?: string;
+    MST?: string;
+    email?: string;
 };

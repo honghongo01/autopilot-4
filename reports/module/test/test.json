@@ -1,18 +1,20 @@
 {
   "testCases": [
     {
-      "codeName": "T_02",
-      "startAt": "2024-08-08T09:52:07.294Z",
-      "finishedAt": "2024-08-08T09:52:07.308Z",
-      "result": "pass",
+      "codeName": "T_01",
+      "startAt": "2024-08-08T09:55:32.087Z",
+      "finishedAt": "2024-08-08T09:55:32.106Z",
+      "result": "fail",
       "testResult": "",
-      "realResult": "passed",
-      "error": []
+      "realResult": "failed",
+      "error": [
+        "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m\"hanh\"\u001b[39m\nReceived: \u001b[31m\"OK\"\u001b[39m"
+      ]
     },
     {
-      "codeName": "T_01",
-      "startAt": "2024-08-08T09:52:30.044Z",
-      "finishedAt": "2024-08-08T09:52:30.059Z",
+      "codeName": "T_02",
+      "startAt": "2024-08-09T02:56:38.043Z",
+      "finishedAt": "2024-08-09T02:56:38.061Z",
       "result": "pass",
       "testResult": "",
       "realResult": "passed",
@@ -20,8 +22,8 @@
     }
   ],
   "summary": {
-    "passed": 2,
-    "failed": 0,
+    "passed": 1,
+    "failed": 1,
     "total": 2
   }
 }

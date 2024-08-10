@@ -55,7 +55,8 @@ export class MyReporter implements Reporter {
             console.error(`Cannot extract code name from ${test.title}`);
         }
     }
-    onEnd(result: FullResult) {
+
+    onEnd() {
         const projectSuites = this.suite.suites;
         for (const suite of projectSuites) {
             const project = suite.project();

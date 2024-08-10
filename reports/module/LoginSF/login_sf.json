@@ -1,28 +1,31 @@
 {
-  "case": [
+  "testCases": [
     {
       "codeName": "LG_02",
-      "startAt": "2024-08-08T07:51:20.868Z",
-      "finishedAt": "2024-08-08T07:51:20.889Z",
-      "result": "pass",
+      "startAt": "2024-08-09T03:33:04.432Z",
+      "finishedAt": "2024-08-09T03:33:23.141Z",
+      "result": "fail",
       "testResult": "",
-      "realResult": "passed",
-      "error": []
+      "realResult": "failed",
+      "error": [
+        "Error: page.goto: net::ERR_NETWORK_CHANGED at https://v2.vietinvoice.vn/\nCall log:\n  \u001b[2m- navigating to \"https://v2.vietinvoice.vn/\", waiting until \"load\"\u001b[22m\n"
+      ]
     },
     {
       "codeName": "LG_01",
-      "startAt": "2024-08-08T07:51:20.859Z",
-      "finishedAt": "2024-08-08T07:51:48.955Z",
-      "result": "pass",
+      "startAt": "2024-08-09T03:20:22.255Z",
+      "finishedAt": "2024-08-09T03:20:43.439Z",
+      "result": "fail",
       "testResult": "",
-      "realResult": "passed",
-      "error": []
+      "realResult": "failed",
+      "error": [
+        "Error: \u001b[31mScreenshot comparison failed:\u001b[39m\n\n  54223 pixels (ratio 0.06 of all image pixels) are different.\n\nExpected: \u001b[33mD:\\autopilot-4\\tests\\module\\LoginSF\\login_sf.spec.ts-snapshots\\test-3-chromium.png\u001b[39m\nReceived: \u001b[33mD:\\autopilot-4\\test-results\\module-LoginSF-login_sf-Lo-ee135--dashboard-thành-công-LG-01-chromium\\test-3-actual.png\u001b[39m\n    Diff: \u001b[33mD:\\autopilot-4\\test-results\\module-LoginSF-login_sf-Lo-ee135--dashboard-thành-công-LG-01-chromium\\test-3-diff.png\u001b[39m\n"
+      ]
     }
   ],
-  "summery": {
-    "totalPass": 2,
-    "totalFalse": 0,
-    "sstartTime": "2024-08-08T07:51:20.101Z",
-    "duration": 29411.659
+  "summary": {
+    "passed": 0,
+    "failed": 2,
+    "total": 2
   }
 }

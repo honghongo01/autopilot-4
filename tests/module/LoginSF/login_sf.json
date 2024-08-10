@@ -1,15 +1,46 @@
 {
     "domain": "https://v2.vietinvoice.vn/",
-    "info_login": {
-        "email": "0312303803-999",
-        "password": "123456"
-    },
     "cases": {
         "LG_01": {
             "picture_beforLogin": "test_1.png",
             "picture_formLogin": "test_2.png",
             "picture_afterLogin": "test_3.png",
-            "messgae": "Xin chào, Wintech kiểm thử hoá đơn có mã"
+            "messgae": "Xin chào, Wintech kiểm thử hoá đơn có mã",
+            "info_login": {
+                "email": "0312303803-999",
+                "password": "123456"
+            }
+        },
+        "LG_02": {
+            "step_info": [
+                {
+                    "step_name": "Bỏ trống các trường bắt buộc",
+                    "info_login": {},
+                    "picture": "validate_1.png"
+                },
+                {
+                    "step_name": "Nhập sai field email khong phai ma so thue",
+                    "info_login": {
+                        "email": "031230380"
+                    },
+                    "picture": "validate_2.png"
+                },
+                {
+                    "step_name": "Nhập sai field email la ma so thue",
+                    "info_login": {
+                        "email": "0312303803-999"
+                    },
+                    "picture": "validate_3.png"
+                },
+                {
+                    "step_name": "login không thành công",
+                    "info_login": {
+                        "email": "0312303803-999",
+                        "password": "1234"
+                    },
+                    "picture": "validate_4.png"
+                }
+            ]
         }
     }
 }
